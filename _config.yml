@@ -9,12 +9,12 @@ url: "http://andresugai.com" # the base hostname & protocol for your site
 permalink: /posts/:title
 
 author: Andre Sugai
-email: tigefa@gmail.com
-github: tigefa4u
-repository: tigefa4u.github.io
-twitter: tigefa_team
-facebook: tigefa.team
-linkedin: tigefadotinfo
+email: asugai@alum.mit.edu
+github: asugai
+repository: asugai.github.io
+twitter: gymclothes
+facebook: andresugai
+linkedin: andresugai
 disqus: andresugai
 
 # Build settings
