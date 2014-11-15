@@ -1,0 +1,19 @@
+html {background: #fafafa; background: url(/images/backgrounds/chicago.jpg) center center fixed no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}
+body {font-family: Arial, sans-serif; color: #fff; font-family: 'Rambla', serif; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;}
+a {color: #000; text-decoration: none; text-shadow: -1px 0 #cec, 0 1px #cec, 1px 0 #cec, 0 -1px #cec;}
+a:hover {color: #666; text-shadow: -1px 0 #fef, 0 1px #fef, 1px 0 #fef, 0 -1px #fef;}
+.wrap {display: none; float: left; position: relative; min-height: 560px; margin: 50px 0 0 50px;}
+.slide {font-size: 4em; float: left; width: 100%; line-height: 65px;}
+.slide1 {margin-top: 10px;}
+.slide4 {margin-bottom: 30px;}
+.fb-like {height: 61px;}
+
+@media (max-width: 979px) and (min-width: 768px) {
+	.wrap {min-height: 495px; margin-top: 35px;}
+	.slide {font-size: 3em; line-height: 55px;}
+}
+
+@media (max-width: 767px) {
+	.wrap {min-height: 290px; margin-top: 20px;}
+	.slide {font-size: 1.2em; line-height: 30px;}
+}
