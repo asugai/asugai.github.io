@@ -9,6 +9,7 @@ url: "http://andresugai.com" # the base hostname & protocol for your site
 permalink: /posts/:title
 
 author: Andre Sugai
+author_photo: https://graph.facebook.com/700941/picture?type=large
 email: asugai@alum.mit.edu
 github: asugai
 repository: asugai.github.io

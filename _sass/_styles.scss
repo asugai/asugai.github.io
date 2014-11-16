@@ -95,13 +95,6 @@
 			width: 5.35em;
 		}
 			
-			#masthead nav li img {
-				border-radius: 50%;
-				margin-right: 20px;
-				height: 4.95em;
-				margin-top: -0.45em;
-			}
-
 			#masthead nav li:nth-child(1) {
 				-moz-animation-delay: 0.25s;
 				-webkit-animation-delay: 0.25s;
@@ -182,4 +175,10 @@
 
 			#masthead nav a span {
 				display: none;
+			}
+			
+			#masthead nav a img {
+				border-radius: 50%;
+				height: 4.95em;
+				margin-top: -0.45em;
 			}
