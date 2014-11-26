@@ -1,8 +1,8 @@
 # Site settings
 title: Andre Sugai
 email: asugai@alum.mit.edu
-description: CTO - Developer - Nerd - Entrepreneur.
-tagline: Brazil - Japan - Peru - USA.
+description: CTO @ Ora Interactive - Enterpreneur
+tagline: Brazil - Japan - Peru - USA
 timezone: America/Chicago
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://andresugai.com" # the base hostname & protocol for your site
