@@ -28,6 +28,7 @@ I'll continue to update this as I run into more things that I missed, but meanwh
 7. [Skype][skype]
 8. [VLC][vlc]
 9. [Google Drive][gdrive]
+10. [Spotify][spotify]
 
 ####The Utlities
 
@@ -64,6 +65,7 @@ $ gem install jekyll
 [skype]: http://www.skype.com/en/download-skype/skype-for-mac/downloading/
 [vlc]: http://www.videolan.org/vlc/download-macosx.html
 [gdrive]: https://tools.google.com/dlpage/drive
+[spotify]: https://www.spotify.com/us/download/mac/
 [git]: http://git-scm.com/
 [homebrew]: http://brew.sh/
 [composer]: https://getcomposer.org/
