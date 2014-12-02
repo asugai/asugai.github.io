@@ -54,6 +54,12 @@ $ sudo ln -s /usr/local/bin/composer /usr/bin/composer
 $ gem install jekyll
 {% endhighlight %}
 
+####The Configuration
+
+#####[.bash\_profile][bash_profile]
+{% highlight bash %}
+export PATH=/Applications/MAMP/bin/php/php5.6.2/bin:$PATH
+{% endhighlight %}
 
 [chrome]: https://www.google.com/chrome/
 [dropbox]: https://www.dropbox.com/downloading?os=mac
@@ -70,3 +76,4 @@ $ gem install jekyll
 [homebrew]: http://brew.sh/
 [composer]: https://getcomposer.org/
 [jekyll]: jekyllrb.com
+[bash_profile]: http://www.gnu.org/software/bash/manual/html_node/Bash-Startup-Files.html
