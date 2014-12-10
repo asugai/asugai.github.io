@@ -1,6 +1,10 @@
 /**
  * Syntax highlighting styles
  */
+pre, code {
+    font-size: 12px;
+}
+
 .highlight {
     background: #fff;
     @extend %vertical-rhythm;

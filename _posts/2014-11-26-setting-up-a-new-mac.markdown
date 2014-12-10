@@ -29,6 +29,7 @@ I'll continue to update this as I run into more things that I missed, but meanwh
 8. [VLC][vlc]
 9. [Google Drive][gdrive]
 10. [Spotify][spotify]
+11. [Adobe Photoshop][photoshop]
 
 ####The Utlities
 
@@ -72,6 +73,7 @@ export PATH=/Applications/MAMP/bin/php/php5.6.2/bin:$PATH
 [vlc]: http://www.videolan.org/vlc/download-macosx.html
 [gdrive]: https://tools.google.com/dlpage/drive
 [spotify]: https://www.spotify.com/us/download/mac/
+[photoshop]: https://www.adobe.com/
 [git]: http://git-scm.com/
 [homebrew]: http://brew.sh/
 [composer]: https://getcomposer.org/
