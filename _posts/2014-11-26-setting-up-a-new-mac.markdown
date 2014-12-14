@@ -30,6 +30,7 @@ I'll continue to update this as I run into more things that I missed, but meanwh
 9. [Google Drive][gdrive]
 10. [Spotify][spotify]
 11. [Adobe Photoshop][photoshop]
+12. [Github for Mac][github]
 
 ####The Utlities
 
@@ -74,6 +75,7 @@ export PATH=/Applications/MAMP/bin/php/php5.6.2/bin:$PATH
 [gdrive]: https://tools.google.com/dlpage/drive
 [spotify]: https://www.spotify.com/us/download/mac/
 [photoshop]: https://www.adobe.com/
+[github]: https://mac.github.com/
 [git]: http://git-scm.com/
 [homebrew]: http://brew.sh/
 [composer]: https://getcomposer.org/
