@@ -56,6 +56,15 @@ $ sudo ln -s /usr/local/bin/composer /usr/bin/composer
 $ gem install jekyll
 {% endhighlight %}
 
+#####[PHP-CS-Fixer][fixer]
+{% highlight bash %}
+$ curl http://get.sensiolabs.org/php-cs-fixer.phar -o php-cs-fixer
+$ sudo chmod a+x php-cs-fixer
+$ sudo mv php-cs-fixer /usr/local/bin/php-cs-fixer
+# usage
+$ php-cs-fixer fix /path/to/dir
+{% endhighlight %}
+
 ####The Configuration
 
 #####[.bash\_profile][bash_profile]
@@ -80,4 +89,5 @@ export PATH=/Applications/MAMP/bin/php/php5.6.2/bin:$PATH
 [homebrew]: http://brew.sh/
 [composer]: https://getcomposer.org/
 [jekyll]: jekyllrb.com
+[fixer]: https://github.com/FriendsOfPHP/PHP-CS-Fixer
 [bash_profile]: http://www.gnu.org/software/bash/manual/html_node/Bash-Startup-Files.html
