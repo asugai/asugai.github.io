@@ -35,7 +35,7 @@ to
     composer.json
     index.php
 
-#####composer.json
+#####composer.json - phpunit included
 {% highlight json linenos=table %}
 {
     "name": "test/a-new-project",
@@ -45,7 +45,8 @@ to
     },
     "require": {
 		"cakephp/debug_kit": "2.2.*",
-        "cakephp/cakephp": "2.5.*"
+        "cakephp/cakephp": "2.5.*",
+        "phpunit/phpunit": "3.7.*"
     },
     "authors": [
         {
@@ -58,9 +59,21 @@ to
 
 #####webroot/index.php - define the CAKE\_CORE\_INCLUDE\_PATH
 {% highlight php linenos=table %}
+<?php
+//...
 define(
     'CAKE_CORE_INCLUDE_PATH',
-    ROOT . DS . APP_DIR . DS . 'Vendor' . DS . 'cakephp' . DS . 'cakephp' . DS . 'lib'
+    ROOT.DS.APP_DIR.DS.'Vendor'.DS.'cakephp'.DS.'cakephp'.DS.'lib'
+);
+{% endhighlight %}
+
+#####webroot/test.php - define the CAKE\_CORE\_INCLUDE\_PATH
+{% highlight php linenos=table %}
+<?php
+//...
+define(
+    'CAKE_CORE_INCLUDE_PATH',
+    ROOT.DS.APP_DIR.DS.'Vendor'.DS.'cakephp'.DS.'cakephp'.DS.'lib'
 );
 {% endhighlight %}
 
@@ -86,31 +99,64 @@ define(
  */
 
 if (!defined('DS')) {
-	define('DS', DIRECTORY_SEPARATOR);
+    define('DS', DIRECTORY_SEPARATOR);
 }
 
-$dispatcher = 'Cake' . DS . 'Console' . DS . 'ShellDispatcher.php';
+$dispatcher = 'Cake'.DS.'Console'.DS.'ShellDispatcher.php';
 
 if (function_exists('ini_set')) {
-	$root = dirname(dirname(dirname(__FILE__)));
-	$appDir = basename(dirname(dirname(__FILE__)));
-	$install = $root . DS . 'lib';
-	$composerInstall = $root . DS . $appDir . DS . 'Vendor' . DS . 'cakephp' . DS . 'cakephp' . DS . 'lib';
+    $root = dirname(dirname(dirname(__FILE__)));
+    $appDir = basename(dirname(dirname(__FILE__)));
+    $install = $root.DS.'lib';
+    $composerInstall = $root.DS.$appDir.DS.'Vendor'.DS.'cakephp'.DS.'cakephp'.DS.'lib';
 
-	// the following lines differ from its sibling
-	// /lib/Cake/Console/Templates/skel/Console/cake.php
-	if (file_exists($composerInstall . DS . $dispatcher)) {
-		$install = $composerInstall;
-	}
+    // the following lines differ from its sibling
+    // /lib/Cake/Console/Templates/skel/Console/cake.php
+    if (file_exists($composerInstall.DS.$dispatcher)) {
+        $install = $composerInstall;
+    }
 
-	ini_set('include_path', $install . PATH_SEPARATOR . ini_get('include_path'));
-	unset($root, $appDir, $install, $composerInstall);
+    ini_set('include_path', $install.PATH_SEPARATOR.ini_get('include_path'));
+    unset($root, $appDir, $install, $composerInstall);
 }
 
 if (!include $dispatcher) {
-	trigger_error('Could not locate CakePHP core files.', E_USER_ERROR);
+    trigger_error('Could not locate CakePHP core files.', E_USER_ERROR);
 }
 unset($dispatcher);
 
 return ShellDispatcher::run($argv);
+{% endhighlight %}
+
+#####.travis.yml - a sample file showing how to set up file paths
+{% highlight yaml linenos=table %}
+language: php
+
+php:
+  - 5.5
+
+before_script:
+  - composer install
+  - sh -c "mysql -u travis -e 'CREATE DATABASE test;'"
+  - chmod -R 777 tmp
+  - echo "<?php
+    class DATABASE_CONFIG
+    {
+      public \$test = array(
+          'datasource' => 'Database/Mysql',
+          'persistent' => false,
+          'host' => '0.0.0.0',
+          'login' => 'travis',
+          'password' => '',
+          'database' => 'test',
+          'prefix' => '',
+          'encoding' => 'utf8'
+      );
+    }" > Config/database.php 
+
+script:
+  - ./Console/cake test app All
+
+notifications:
+  email: false;
 {% endhighlight %}
