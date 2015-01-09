@@ -9,7 +9,7 @@ One of the most horrifying things for a developer is to watch your computer lock
 
 ####RIP - Macbook Pro
 
-After 2 years of running it ragged and keeping the fans at full blast just so it wouldn't overheat, the stress caught up with my little Late 2011 Macbook Pro.
+After 2 years of running it ragged and keeping the fans at full blast just so it wouldn't overheat, the stress caught up with my little Late 2011 Macbook Pro
 
 ####A New Hope
 
