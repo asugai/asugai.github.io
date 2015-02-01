@@ -77,7 +77,20 @@ define(
 );
 {% endhighlight %}
 
-#####Console/cake.php - replace the whole file (fixes console commands)
+#####Config/bootstrap.php - Fixes autoloader issues
+{% highlight php linenos=table %}
+<?php
+//...
+// Load composer autoload.
+require APP.'Vendor'.DS.'autoload.php';
+
+// Remove and re-prepend CakePHP's autoloader as composer thinks it is the most important.
+// See https://github.com/composer/composer/commit/c80cb76b9b5082ecc3e5b53b1050f76bb27b127b
+spl_autoload_unregister(array('App', 'load'));
+spl_autoload_register(array('App', 'load'), true, true);
+{% endhighlight %}
+
+#####Console/cake.php - If you are using an older version of cake (<2.6) replace the whole file (fixes console commands)
 {% highlight php linenos=table %}
 #!/usr/bin/php -q
 <?php
