@@ -38,8 +38,8 @@ to
 #####composer.json - phpunit included
 {% highlight json linenos=table %}
 {
-    "name": "test/a-new-project",
-    "description": "A new Project",
+    "name": "{useraname}/{project-name}",
+    "description": "Example Project",
     "config": {
         "vendor-dir": "Vendor"
     },
@@ -50,8 +50,8 @@ to
     },
     "authors": [
         {
-            "name": "Test T.",
-            "email": "test@test.com"
+            "name": "Marty McFly",
+            "email": "example@example.com"
         }
     ]
 }
