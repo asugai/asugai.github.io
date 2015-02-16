@@ -8,4 +8,13 @@ comments: true
 
 I've had a few people tell me this has come in handy:
 
-<script src="https://gist.github.com/asugai/6694502.js"></script>
+#####In console
+{% highlight bash linenos=table %}
+$ cd ~
+$ sudo curl -sS https://getcomposer.org/installer | sudo php
+$ sudo mv composer.phar /usr/local/bin/composer
+$ sudo ln -s /usr/local/bin/composer /usr/bin/composer
+ 
+then you can run 
+$ sudo composer install
+{% endhighlight %}

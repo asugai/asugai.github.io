@@ -8,4 +8,8 @@ comments: true
 
 This caused me quite a bit of trouble so here it is:
 
-<script src="https://gist.github.com/asugai/ad24889bd46ef3a63e29.js"></script>
+#####In console
+{% highlight bash linenos=table %}
+/Applications/MAMP/Library/bin/mysql_tzinfo_to_sql /usr/share/zoneinfo | \
+/Applications/MAMP/Library/bin/mysql -u root -p mysql
+{% endhighlight %}
