@@ -50,7 +50,7 @@ to
     },
     "authors": [
         {
-            "name": "Marty McFly",
+            "name": "Andre Sugai",
             "email": "example@example.com"
         }
     ]
